@@ -5,7 +5,7 @@ def decrypt(source: str, target: str) -> None:
         f.seek(152)
         data = bytearray(f.read())
     length = len(data)
-    l = length // 100
+    l = (length - 1) // 100
     p = 0
     a = (length % 254) 
     while p < length:
